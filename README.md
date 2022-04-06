@@ -413,7 +413,7 @@ Below is an example JSON metadata file that demonstrates almost everything that 
         }
     ],
     "thesis_university": "The university",
-    "title": "Untitled",
+    "title": "All the properties!",
     "upload_type": "image",
     "version": "1.2.3-b4"
 }
