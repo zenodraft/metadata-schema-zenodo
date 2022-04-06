@@ -1,0 +1,531 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "additionalProperties": false,
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "access_right": {
+                        "const": "embargoed"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "embargo_date",
+                    "license"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "access_right": {
+                        "const": "closed"
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "access_right": {
+                        "const": "open"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "license"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "access_right": {
+                        "const": "restricted"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "access_conditions"
+                ]
+            }
+        }
+    ],
+    "definitions": {},
+    "properties": {
+        "access_conditions": {
+            "type": "string"
+        },
+        "access_right": {
+            "description": "Open access uploads have considerably higher visibility on Zenodo.",
+            "enum": [
+                "embargoed",
+                "closed",
+                "open",
+                "restricted"
+            ],
+            "type": "string"
+        },
+        "communities": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "identifier": {
+                        "type": "string"
+                    }
+                },
+                "required": [],
+                "type": "object"
+            },
+            "minItems": 0,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "conference_acronym": {
+            "type": "string"
+        },
+        "conference_dates": {
+            "type": "string"
+        },
+        "conference_place": {
+            "type": "string"
+        },
+        "conference_session": {
+            "type": "string"
+        },
+        "conference_session_part": {
+            "type": "string"
+        },
+        "conference_title": {
+            "type": "string"
+        },
+        "conference_url": {
+            "format": "url",
+            "type": "string"
+        },
+        "contributors": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "affiliation": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Family name, given names",
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "orcid": {
+                        "description": "ORCID identifier",
+                        "examples": [
+                            "0000-0002-1825-0097"
+                        ],
+                        "pattern": "[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]{1}",
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "ContactPerson",
+                            "DataCollector",
+                            "DataCurator",
+                            "DataManager",
+                            "Distributor",
+                            "Editor",
+                            "HostingInstitution",
+                            "Other",
+                            "Producer",
+                            "ProjectLeader",
+                            "ProjectManager",
+                            "ProjectMember",
+                            "RegistrationAgency",
+                            "RegistrationAuthority",
+                            "RelatedPerson",
+                            "ResearchGroup",
+                            "Researcher",
+                            "RightsHolder",
+                            "Sponsor",
+                            "Supervisor",
+                            "WorkPackageLeader"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "type"
+                ],
+                "type": "object"
+            },
+            "minItems": 0,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "creators": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "affiliation": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Family name, given names",
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "orcid": {
+                        "description": "ORCID identifier",
+                        "examples": [
+                            "0000-0002-1825-0097"
+                        ],
+                        "pattern": "[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]{1}",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "type": "object"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "description": {
+            "description": "Description",
+            "minLength": 1,
+            "type": "string"
+        },
+        "doi": {
+            "oneOf": [
+                {
+                    "examples": [
+                        "10.5281/zenodo.1003150"
+                    ],
+                    "pattern": "^10\\.\\d{4,9}(\\.\\d+)?/[A-Za-z0-9:/_;\\-\\.\\(\\)\\[\\]\\\\]+$",
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        ""
+                    ],
+                    "type": "string"
+                }
+            ]
+        },
+        "embargo_date": {
+            "format": "date",
+            "type": "string"
+        },
+        "grants": {
+            "items": {
+                "additionalProperties": false,
+                "examples": [
+                    "10.13039/501100000780::675191"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id"
+                ],
+                "type": "object"
+            },
+            "minItems": 0,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "image_type": {
+            "enum": [
+                "figure",
+                "plot",
+                "drawing",
+                "diagram",
+                "photo",
+                "other"
+            ],
+            "type": "string"
+        },
+        "imprint_isbn": {
+            "type": "string"
+        },
+        "imprint_place": {
+            "type": "string"
+        },
+        "imprint_publisher": {
+            "type": "string"
+        },
+        "journal_issue": {
+            "type": "string"
+        },
+        "journal_pages": {
+            "type": "string"
+        },
+        "journal_title": {
+            "type": "string"
+        },
+        "journal_volume": {
+            "type": "string"
+        },
+        "keywords": {
+            "items": {
+                "minLength": 1,
+                "type": "string"
+            },
+            "minItems": 0,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "language": {
+            "description": "ISO 639 language identifier.",
+            "examples": [
+                "ada",
+                "eng",
+                "bla"
+            ],
+            "pattern": "^[a-z]{2,3}$",
+            "type": "string"
+        },
+        "license": {
+            "enum": [
+                "Apache-2.0"
+            ],
+            "type": "string"
+        },
+        "notes": {
+            "minLength": 0,
+            "type": "string"
+        },
+        "partof_pages": {
+            "type": "string"
+        },
+        "partof_title": {
+            "type": "string"
+        },
+        "publication_date": {
+            "description": "Format: YYYY-MM-DD. In case your upload was already published elsewhere, please use the date of first publication.",
+            "examples": [
+                "2013-05-08"
+            ],
+            "format": "date",
+            "type": "string"
+        },
+        "publication_type": {
+            "enum": [
+                "annotationcollection",
+                "book",
+                "section",
+                "conferencepaper",
+                "datamanagementplan",
+                "article",
+                "patent",
+                "preprint",
+                "deliverable",
+                "milestone",
+                "proposal",
+                "report",
+                "softwaredocumentation",
+                "taxonomictreatment",
+                "technicalnote",
+                "thesis",
+                "workingpaper",
+                "other"
+            ],
+            "type": "string"
+        },
+        "references": {
+            "minItems": 0,
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true,
+            "type": "array"
+        },
+        "related_identifiers": {
+            "minItems": 0,
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "identifier": {
+                        "type": "string"
+                    },
+                    "relation": {
+                        "enum": [
+                            "cites",
+                            "compiles",
+                            "continues",
+                            "describes",
+                            "documents",
+                            "hasPart",
+                            "isAlternateIdentifier",
+                            "isCitedBy",
+                            "isCompiledBy",
+                            "isContinuedBy",
+                            "isDerivedFrom",
+                            "isDescribedBy",
+                            "isDocumentedBy",
+                            "isIdenticalTo",
+                            "isNewVersionOf",
+                            "isObsoletedBy",
+                            "isPartOf",
+                            "isPreviousVersionOf",
+                            "isPublishedIn",
+                            "isReferencedBy",
+                            "isRequiredBy",
+                            "isReviewedBy",
+                            "isSourceOf",
+                            "isSupplementedBy",
+                            "isSupplementTo",
+                            "obsoletes",
+                            "references",
+                            "requires",
+                            "reviews"
+                        ],
+                        "type": "string"
+                    },
+                    "resource_type": {
+                        "enum": [
+                            "dataset",
+                            "image-diagram",
+                            "image-drawing",
+                            "image-figure",
+                            "image-other",
+                            "image-photo",
+                            "image-plot",
+                            "lesson",
+                            "other",
+                            "physicalobject",
+                            "poster",
+                            "presentation",
+                            "publication-annotationcollection",
+                            "publication-article",
+                            "publication-book",
+                            "publication-conferencepaper",
+                            "publication-datamanagementplan",
+                            "publication-deliverable",
+                            "publication-milestone",
+                            "publication-other",
+                            "publication-patent",
+                            "publication-preprint",
+                            "publication-proposal",
+                            "publication-report",
+                            "publication-section",
+                            "publication-softwaredocumentation",
+                            "publication-taxonomictreatment",
+                            "publication-technicalnote",
+                            "publication-thesis",
+                            "publication-workingpaper",
+                            "software",
+                            "video"
+                        ],
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "enum": [
+                            "pmid"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "identifier",
+                    "relation"
+                ],
+                "type": "object"
+            },
+            "uniqueItems": true,
+            "type": "array"
+        },
+        "subjects": {
+            "minItems": 0,
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "identifier": {
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "type": "string"
+                    },
+                    "term": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "uniqueItems": true
+            },
+            "type": "array",
+            "uniqueItems": true
+        },
+        "thesis_supervisors": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "affiliation": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Family name, given names",
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "orcid": {
+                        "description": "ORCID identifier",
+                        "examples": [
+                            "0000-0002-1825-0097"
+                        ],
+                        "pattern": "[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]{1}",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "type": "object"
+            },
+            "minItems": 0,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "thesis_university": {
+            "type": "string"
+        },
+        "title": {
+            "minLength": 3,
+            "type": "string"
+        },
+        "upload_type": {
+            "enum": [
+                "publication",
+                "poster",
+                "presentation",
+                "dataset",
+                "image",
+                "video",
+                "software",
+                "lesson",
+                "physicalobject",
+                "other"
+            ],
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "access_right",
+        "description",
+        "title"
+    ],
+    "type": "object"
+}
+
