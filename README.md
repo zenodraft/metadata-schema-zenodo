@@ -1,8 +1,8 @@
 # Zenodo upload metadata schema
 
-File `schema.json` contains the JSONschema schema for the metadata used when making uploads to Zenodo or Zenodo Sandbox. It was derived by hand from
-https://github.com/zenodo/zenodo/blob/f091af8f2d0bfac2fdaf53222160f8e037d5a0e6/zenodo/modules/deposit/static/json/zenodo_deposit/deposit_form.json
-
+File `schema.json` contains the JSONschema schema for the metadata used when making uploads to Zenodo or Zenodo Sandbox. It was derived by hand using the following resources:
+1. https://github.com/zenodo/zenodo/blob/f091af8f2d0bfac2fdaf53222160f8e037d5a0e6/zenodo/modules/deposit/static/json/zenodo_deposit/deposit_form.json
+2. https://github.com/zenodo/zenodo/blob/594bad1d2c3c12c2d44a8f35950662677d51414b/tests/unit/conftest.py#L1376-L1430
 
 Below is an example file that includes most keys:
 
@@ -67,9 +67,196 @@ Below is an example file that includes most keys:
     ],
     "related_identifiers": [
         {
-            "identifier": "134514",
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "cites",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ark:/13030/tqb3kh97gh8w",
+            "relation": "compiles",
+            "resource_type": "image-diagram",
+            "scheme": "ark"
+        },
+        {
+            "identifier": "hep-th/1601.07616",
+            "relation": "continues",
+            "resource_type": "image-drawing",
+            "scheme": "arxiv"
+        },
+        {
+            "identifier": "PRJNA224116",
+            "relation": "describes",
+            "resource_type": "image-figure",
+            "scheme": "bioproject"
+        },
+        {
+            "identifier": "SAMN08289383",
+            "relation": "documents",
+            "resource_type": "image-other",
+            "scheme": "biosample"
+        },
+        {
+            "identifier": "10.1002/example",
+            "relation": "hasPart",
+            "resource_type": "image-photo",
+            "scheme": "doi"
+        },
+        {
+            "identifier": "4006381333931",
+            "relation": "isAlternateIdentifier",
+            "resource_type": "image-plot",
+            "scheme": "ean13"
+        },
+        {
+            "identifier": "73513537",
+            "relation": "isCitedBy",
+            "resource_type": "lesson",
+            "scheme": "ean8"
+        },
+        {
+            "identifier": "ENSMUST00000017290",
+            "relation": "isCompiledBy",
+            "resource_type": "other",
+            "scheme": "ensembl"
+        },
+        {
+            "identifier": "GCF_000001405.38",
+            "relation": "isContinuedBy",
+            "resource_type": "physicalobject",
+            "scheme": "genome"
+        },
+        {
+            "identifier": "4079154-3",
+            "relation": "isDerivedFrom",
+            "resource_type": "poster",
+            "scheme": "gnd"
+        },
+        {
+            "identifier": "mem_13102590",
+            "relation": "isDescribedBy",
+            "resource_type": "presentation",
+            "scheme": "hal"
+        },
+        {
+            "identifier": "10013/epic.10033",
+            "relation": "isDocumentedBy",
+            "resource_type": "publication-annotationcollection",
+            "scheme": "handle"
+        },
+        {
+            "identifier": "0-9752298-0-X",
+            "relation": "isIdenticalTo",
+            "resource_type": "publication-article",
+            "scheme": "isbn"
+        },
+        {
+            "identifier": "1422-4586-3573-0476",
+            "relation": "isNewVersionOf",
+            "resource_type": "publication-book",
+            "scheme": "isni"
+        },
+        {
+            "identifier": "1188-1534",
+            "relation": "isObsoletedBy",
+            "resource_type": "publication-conferencepaper",
+            "scheme": "issn"
+        },
+        {
+            "identifier": "0A9 2002 12B4A105 7",
+            "relation": "isPartOf",
+            "resource_type": "publication-datamanagementplan",
+            "scheme": "istc"
+        },
+        {
+            "identifier": "urn:lsid:ubio.org:namebank:11815",
+            "relation": "isPreviousVersionOf",
+            "resource_type": "publication-deliverable",
+            "scheme": "lsid"
+        },
+        {
+            "identifier": "0000-0002-1694-233X",
+            "relation": "isPublishedIn",
+            "resource_type": "publication-milestone",
+            "scheme": "orcid"
+        },
+        {
+            "identifier": "PMC2631623",
+            "relation": "isReferencedBy",
+            "resource_type": "publication-other",
+            "scheme": "pmcid"
+        },
+        {
+            "identifier": "pmid:12082125",
+            "relation": "isRequiredBy",
+            "resource_type": "publication-patent",
+            "scheme": "pmid"
+        },
+        {
+            "identifier": "http://purl.oclc.org/foo/bar",
+            "relation": "isReviewedBy",
+            "resource_type": "publication-preprint",
+            "scheme": "purl"
+        },
+        {
+            "identifier": "NZ_JXSL01000036.1",
+            "relation": "isSourceOf",
+            "resource_type": "publication-proposal",
+            "scheme": "refseq"
+        },
+        {
+            "identifier": "SRR6437777",
             "relation": "isSupplementedBy",
-            "resource_type": "publication-book"
+            "resource_type": "publication-report",
+            "scheme": "sra"
+        },
+        {
+            "identifier": "Q9GYV0",
+            "relation": "isSupplementTo",
+            "resource_type": "publication-section",
+            "scheme": "uniprot"
+        },
+        {
+            "identifier": "http://www.heatflow.und.edu/index2.html",
+            "relation": "obsoletes",
+            "resource_type": "publication-softwaredocumentation",
+            "scheme": "url"
+        },
+        {
+            "identifier": "urn:nbn:de:101:1-201102033592",
+            "relation": "references",
+            "resource_type": "publication-taxonomictreatment",
+            "scheme": "urn"
+        },
+        {
+            "identifier": "swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2",
+            "relation": "requires",
+            "resource_type": "publication-technicalnote",
+            "scheme": "swh"
+        },
+        {
+            "identifier": "ascl:1908.011",
+            "relation": "reviews",
+            "resource_type": "publication-thesis",
+            "scheme": "ascl"
+        },
+        {
+            "identifier": "ascl:1908.011",
+            "relation": "reviews",
+            "resource_type": "publication-workingpaper",
+            "scheme": "ascl"
+        },
+        {
+            "identifier": "ascl:1908.011",
+            "relation": "reviews",
+            "resource_type": "software",
+            "scheme": "ascl"
+        },
+        {
+            "identifier": "ascl:1908.011",
+            "relation": "reviews",
+            "resource_type": "video",
+            "scheme": "ascl"
         }
     ],
     "subjects": [
