@@ -21,15 +21,6 @@
             "if": {
                 "properties": {
                     "access_right": {
-                        "const": "closed"
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "properties": {
-                    "access_right": {
                         "const": "open"
                     }
                 }
@@ -51,6 +42,34 @@
             "then": {
                 "required": [
                     "access_conditions"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "upload_type": {
+                        "const": "image"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "image_type"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "upload_type": {
+                        "const": "publication"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "publication_type"
                 ]
             }
         }
