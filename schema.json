@@ -447,7 +447,35 @@
                     },
                     "scheme": {
                         "enum": [
-                            "pmid"
+                            "ads",
+                            "ark",
+                            "arxiv",
+                            "ascl",
+                            "bioproject",
+                            "biosample",
+                            "doi",
+                            "ean13",
+                            "ean8",
+                            "ensembl",
+                            "genome",
+                            "gnd",
+                            "hal",
+                            "handle",
+                            "isbn",
+                            "isni",
+                            "issn",
+                            "istc",
+                            "lsid",
+                            "orcid",
+                            "pmcid",
+                            "pmid",
+                            "purl",
+                            "refseq",
+                            "sra",
+                            "swh",
+                            "uniprot",
+                            "url",
+                            "urn"
                         ],
                         "type": "string"
                     }
