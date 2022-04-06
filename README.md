@@ -4,7 +4,7 @@ File `schema.json` contains the JSONschema schema for the metadata used when mak
 1. https://github.com/zenodo/zenodo/blob/f091af8f2d0bfac2fdaf53222160f8e037d5a0e6/zenodo/modules/deposit/static/json/zenodo_deposit/deposit_form.json
 2. https://github.com/zenodo/zenodo/blob/594bad1d2c3c12c2d44a8f35950662677d51414b/tests/unit/conftest.py#L1376-L1430
 
-Below is an example file that includes most keys:
+Below is an example JSON metadata file that demonstrates (almost) everything that is valid within the constraints of the schema:
 
 ```json
 {
@@ -261,8 +261,148 @@ Below is an example file that includes most keys:
     ],
     "subjects": [
         {
-            "identifier": "https://somewhere.com",
+            "identifier": "ads:2011ApJS..192...18K",
+            "scheme": "ads",
+            "term": "some-term"
+        },
+        {
+            "identifier": "ark:/13030/tqb3kh97gh8w",
+            "scheme": "ark",
+            "term": "some-term"
+        },
+        {
+            "identifier": "hep-th/1601.07616",
+            "scheme": "arxiv",
+            "term": "some-term"
+        },
+        {
+            "identifier": "PRJNA224116",
+            "scheme": "bioproject",
+            "term": "some-term"
+        },
+        {
+            "identifier": "SAMN08289383",
+            "scheme": "biosample",
+            "term": "some-term"
+        },
+        {
+            "identifier": "10.1002/example",
+            "scheme": "doi",
+            "term": "some-term"
+        },
+        {
+            "identifier": "4006381333931",
+            "scheme": "ean13",
+            "term": "some-term"
+        },
+        {
+            "identifier": "73513537",
+            "scheme": "ean8",
+            "term": "some-term"
+        },
+        {
+            "identifier": "ENSMUST00000017290",
+            "scheme": "ensembl",
+            "term": "some-term"
+        },
+        {
+            "identifier": "GCF_000001405.38",
+            "scheme": "genome",
+            "term": "some-term"
+        },
+        {
+            "identifier": "4079154-3",
+            "scheme": "gnd",
+            "term": "some-term"
+        },
+        {
+            "identifier": "mem_13102590",
+            "scheme": "hal",
+            "term": "some-term"
+        },
+        {
+            "identifier": "10013/epic.10033",
+            "scheme": "handle",
+            "term": "some-term"
+        },
+        {
+            "identifier": "0-9752298-0-X",
+            "scheme": "isbn",
+            "term": "some-term"
+        },
+        {
+            "identifier": "1422-4586-3573-0476",
+            "scheme": "isni",
+            "term": "some-term"
+        },
+        {
+            "identifier": "1188-1534",
+            "scheme": "issn",
+            "term": "some-term"
+        },
+        {
+            "identifier": "0A9 2002 12B4A105 7",
+            "scheme": "istc",
+            "term": "some-term"
+        },
+        {
+            "identifier": "urn:lsid:ubio.org:namebank:11815",
+            "scheme": "lsid",
+            "term": "some-term"
+        },
+        {
+            "identifier": "0000-0002-1694-233X",
+            "scheme": "orcid",
+            "term": "some-term"
+        },
+        {
+            "identifier": "PMC2631623",
+            "scheme": "pmcid",
+            "term": "some-term"
+        },
+        {
+            "identifier": "pmid:12082125",
+            "scheme": "pmid",
+            "term": "some-term"
+        },
+        {
+            "identifier": "http://purl.oclc.org/foo/bar",
+            "scheme": "purl",
+            "term": "some-term"
+        },
+        {
+            "identifier": "NZ_JXSL01000036.1",
+            "scheme": "refseq",
+            "term": "some-term"
+        },
+        {
+            "identifier": "SRR6437777",
+            "scheme": "sra",
+            "term": "some-term"
+        },
+        {
+            "identifier": "Q9GYV0",
+            "scheme": "uniprot",
+            "term": "some-term"
+        },
+        {
+            "identifier": "http://www.heatflow.und.edu/index2.html",
             "scheme": "url",
+            "term": "some-term"
+        },
+        {
+            "identifier": "urn:nbn:de:101:1-201102033592",
+            "scheme": "urn",
+            "term": "some-term"
+        },
+        {
+            "identifier": "swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2",
+            "scheme": "swh",
+            "term": "some-term"
+        },
+        {
+            "identifier": "ascl:1908.011",
+            "scheme": "ascl",
             "term": "some-term"
         }
     ],
