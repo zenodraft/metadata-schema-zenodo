@@ -63,8 +63,8 @@
         "access_right": {
             "description": "Open access uploads have considerably higher visibility on Zenodo.",
             "enum": [
-                "embargoed",
                 "closed",
+                "embargoed",
                 "open",
                 "restricted"
             ],
@@ -145,8 +145,8 @@
                             "RegistrationAgency",
                             "RegistrationAuthority",
                             "RelatedPerson",
-                            "ResearchGroup",
                             "Researcher",
+                            "ResearchGroup",
                             "RightsHolder",
                             "Sponsor",
                             "Supervisor",
@@ -244,12 +244,12 @@
         },
         "image_type": {
             "enum": [
-                "figure",
-                "plot",
-                "drawing",
                 "diagram",
+                "drawing",
+                "figure",
+                "other",
                 "photo",
-                "other"
+                "plot"
             ],
             "type": "string"
         },
@@ -320,36 +320,35 @@
         "publication_type": {
             "enum": [
                 "annotationcollection",
+                "article",
                 "book",
-                "section",
                 "conferencepaper",
                 "datamanagementplan",
-                "article",
-                "patent",
-                "preprint",
                 "deliverable",
                 "milestone",
+                "other",
+                "patent",
+                "preprint",
                 "proposal",
                 "report",
+                "section",
                 "softwaredocumentation",
                 "taxonomictreatment",
                 "technicalnote",
                 "thesis",
-                "workingpaper",
-                "other"
+                "workingpaper"
             ],
             "type": "string"
         },
         "references": {
-            "minItems": 0,
             "items": {
                 "type": "string"
             },
-            "uniqueItems": true,
-            "type": "array"
+            "minItems": 0,
+            "type": "array",
+            "uniqueItems": true
         },
         "related_identifiers": {
-            "minItems": 0,
             "items": {
                 "additionalProperties": false,
                 "properties": {
@@ -440,11 +439,11 @@
                 ],
                 "type": "object"
             },
-            "uniqueItems": true,
-            "type": "array"
+            "minItems": 0,
+            "type": "array",
+            "uniqueItems": true
         },
         "subjects": {
-            "minItems": 0,
             "items": {
                 "additionalProperties": false,
                 "properties": {
@@ -461,6 +460,7 @@
                 "type": "object",
                 "uniqueItems": true
             },
+            "minItems": 0,
             "type": "array",
             "uniqueItems": true
         },
@@ -504,16 +504,16 @@
         },
         "upload_type": {
             "enum": [
-                "publication",
-                "poster",
-                "presentation",
                 "dataset",
                 "image",
-                "video",
-                "software",
                 "lesson",
+                "other",
                 "physicalobject",
-                "other"
+                "poster",
+                "presentation",
+                "publication",
+                "software",
+                "video"
             ],
             "type": "string"
         },
@@ -528,4 +528,3 @@
     ],
     "type": "object"
 }
-
