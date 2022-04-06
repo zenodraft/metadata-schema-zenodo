@@ -4,7 +4,7 @@ File `schema.json` contains the JSONschema schema for the metadata used when mak
 1. https://github.com/zenodo/zenodo/blob/f091af8f2d0bfac2fdaf53222160f8e037d5a0e6/zenodo/modules/deposit/static/json/zenodo_deposit/deposit_form.json
 2. https://github.com/zenodo/zenodo/blob/594bad1d2c3c12c2d44a8f35950662677d51414b/tests/unit/conftest.py#L1376-L1430
 
-Below is an example JSON metadata file that demonstrates almost everything that is valid within the constraints of the schema (there are some additional, conditional properties that need to be present based on the value of `access_right` and of `upload_type`; the example shows just one of the possible  combinations).
+Below is an example JSON metadata file that demonstrates almost everything that is valid within the constraints of the schema (there are some additional, conditional properties that need to be present based on the value of `access_right` and of `upload_type`; the example shows just one of the possible  combinations). The resulting record on Zenodo Sandbox is here: https://sandbox.zenodo.org/record/1049232.
 
 ```json
 {
