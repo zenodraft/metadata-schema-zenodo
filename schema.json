@@ -1091,7 +1091,8 @@
     "required": [
         "access_right",
         "description",
-        "title"
+        "title",
+        "upload_type"
     ],
     "type": "object"
 }
