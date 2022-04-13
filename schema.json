@@ -1021,8 +1021,11 @@
                         "type": "string"
                     }
                 },
-                "type": "object",
-                "uniqueItems": true
+                "required": [
+                    "identifier",
+                    "term"
+                ],
+                "type": "object"
             },
             "minItems": 0,
             "type": "array",
