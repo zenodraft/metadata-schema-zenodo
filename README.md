@@ -161,6 +161,48 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "relation": "references",
             "resource_type": "publication-taxonomictreatment",
             "scheme": "urn"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isAlternateIdentifier",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "hasMetadata",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "hasVersion",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isMetadataFor",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isOriginalFormOf",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isVariantFormOf",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isVersionOf",
+            "resource_type": "dataset",
+            "scheme": "ads"
         }
     ],
     "subjects": [
