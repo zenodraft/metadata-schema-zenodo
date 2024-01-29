@@ -85,18 +85,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "scheme": "arxiv"
         },
         {
-            "identifier": "PRJNA224116",
-            "relation": "describes",
-            "resource_type": "image-figure",
-            "scheme": "bioproject"
-        },
-        {
-            "identifier": "SAMN08289383",
-            "relation": "documents",
-            "resource_type": "image-other",
-            "scheme": "biosample"
-        },
-        {
             "identifier": "10.1002/example",
             "relation": "hasPart",
             "resource_type": "image-photo",
@@ -107,36 +95,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "relation": "isAlternateIdentifier",
             "resource_type": "image-plot",
             "scheme": "ean13"
-        },
-        {
-            "identifier": "73513537",
-            "relation": "isCitedBy",
-            "resource_type": "lesson",
-            "scheme": "ean8"
-        },
-        {
-            "identifier": "ENSMUST00000017290",
-            "relation": "isCompiledBy",
-            "resource_type": "other",
-            "scheme": "ensembl"
-        },
-        {
-            "identifier": "GCF_000001405.38",
-            "relation": "isContinuedBy",
-            "resource_type": "physicalobject",
-            "scheme": "genome"
-        },
-        {
-            "identifier": "4079154-3",
-            "relation": "isDerivedFrom",
-            "resource_type": "poster",
-            "scheme": "gnd"
-        },
-        {
-            "identifier": "mem_13102590",
-            "relation": "isDescribedBy",
-            "resource_type": "presentation",
-            "scheme": "hal"
         },
         {
             "identifier": "10013/epic.10033",
@@ -181,12 +139,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "scheme": "orcid"
         },
         {
-            "identifier": "PMC2631623",
-            "relation": "isReferencedBy",
-            "resource_type": "publication-other",
-            "scheme": "pmcid"
-        },
-        {
             "identifier": "pmid:12082125",
             "relation": "isRequiredBy",
             "resource_type": "publication-patent",
@@ -199,24 +151,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "scheme": "purl"
         },
         {
-            "identifier": "NZ_JXSL01000036.1",
-            "relation": "isSourceOf",
-            "resource_type": "publication-proposal",
-            "scheme": "refseq"
-        },
-        {
-            "identifier": "SRR6437777",
-            "relation": "isSupplementedBy",
-            "resource_type": "publication-report",
-            "scheme": "sra"
-        },
-        {
-            "identifier": "Q9GYV0",
-            "relation": "isSupplementTo",
-            "resource_type": "publication-section",
-            "scheme": "uniprot"
-        },
-        {
             "identifier": "http://www.heatflow.und.edu/index2.html",
             "relation": "obsoletes",
             "resource_type": "publication-softwaredocumentation",
@@ -227,36 +161,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "relation": "references",
             "resource_type": "publication-taxonomictreatment",
             "scheme": "urn"
-        },
-        {
-            "identifier": "swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2",
-            "relation": "requires",
-            "resource_type": "publication-technicalnote",
-            "scheme": "swh"
-        },
-        {
-            "identifier": "ascl:1908.011",
-            "relation": "reviews",
-            "resource_type": "publication-thesis",
-            "scheme": "ascl"
-        },
-        {
-            "identifier": "ascl:1908.011",
-            "relation": "reviews",
-            "resource_type": "publication-workingpaper",
-            "scheme": "ascl"
-        },
-        {
-            "identifier": "ascl:1908.011",
-            "relation": "reviews",
-            "resource_type": "software",
-            "scheme": "ascl"
-        },
-        {
-            "identifier": "ascl:1908.011",
-            "relation": "reviews",
-            "resource_type": "video",
-            "scheme": "ascl"
         }
     ],
     "subjects": [
