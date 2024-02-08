@@ -1,10 +1,8 @@
-# Zenodo upload metadata schema
+# Unofficial JSON schema for Zenodo upload metadata
 
-File `schema.json` contains the JSONschema schema for the metadata used when making uploads to Zenodo or Zenodo Sandbox. It was derived by hand using the following resources:
-1. https://github.com/zenodo/zenodo/blob/f091af8f2d0bfac2fdaf53222160f8e037d5a0e6/zenodo/modules/deposit/static/json/zenodo_deposit/deposit_form.json
-2. https://github.com/zenodo/zenodo/blob/594bad1d2c3c12c2d44a8f35950662677d51414b/tests/unit/conftest.py#L1376-L1430
+File `schema.json` contains the JSONschema schema for the metadata used when making uploads to Zenodo or Zenodo Sandbox.
 
-Below is an example JSON metadata file that demonstrates almost everything that is valid within the constraints of the schema (there are some additional, conditional properties that need to be present based on the value of `access_right` and of `upload_type`; the example shows just one of the possible  combinations). The resulting record on Zenodo Sandbox is here: https://sandbox.zenodo.org/record/1049232.
+Below is an example JSON metadata file that demonstrates almost everything that is valid within the constraints of the schema (there are some additional, conditional properties that need to be present based on the value of `access_right`; the example shows just one of the possible  combinations). The resulting record on Zenodo Sandbox is here: https://sandbox.zenodo.org/record/24389.
 
 ```json
 {
@@ -85,18 +83,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "scheme": "arxiv"
         },
         {
-            "identifier": "PRJNA224116",
-            "relation": "describes",
-            "resource_type": "image-figure",
-            "scheme": "bioproject"
-        },
-        {
-            "identifier": "SAMN08289383",
-            "relation": "documents",
-            "resource_type": "image-other",
-            "scheme": "biosample"
-        },
-        {
             "identifier": "10.1002/example",
             "relation": "hasPart",
             "resource_type": "image-photo",
@@ -107,36 +93,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "relation": "isAlternateIdentifier",
             "resource_type": "image-plot",
             "scheme": "ean13"
-        },
-        {
-            "identifier": "73513537",
-            "relation": "isCitedBy",
-            "resource_type": "lesson",
-            "scheme": "ean8"
-        },
-        {
-            "identifier": "ENSMUST00000017290",
-            "relation": "isCompiledBy",
-            "resource_type": "other",
-            "scheme": "ensembl"
-        },
-        {
-            "identifier": "GCF_000001405.38",
-            "relation": "isContinuedBy",
-            "resource_type": "physicalobject",
-            "scheme": "genome"
-        },
-        {
-            "identifier": "4079154-3",
-            "relation": "isDerivedFrom",
-            "resource_type": "poster",
-            "scheme": "gnd"
-        },
-        {
-            "identifier": "mem_13102590",
-            "relation": "isDescribedBy",
-            "resource_type": "presentation",
-            "scheme": "hal"
         },
         {
             "identifier": "10013/epic.10033",
@@ -181,12 +137,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "scheme": "orcid"
         },
         {
-            "identifier": "PMC2631623",
-            "relation": "isReferencedBy",
-            "resource_type": "publication-other",
-            "scheme": "pmcid"
-        },
-        {
             "identifier": "pmid:12082125",
             "relation": "isRequiredBy",
             "resource_type": "publication-patent",
@@ -197,24 +147,6 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "relation": "isReviewedBy",
             "resource_type": "publication-preprint",
             "scheme": "purl"
-        },
-        {
-            "identifier": "NZ_JXSL01000036.1",
-            "relation": "isSourceOf",
-            "resource_type": "publication-proposal",
-            "scheme": "refseq"
-        },
-        {
-            "identifier": "SRR6437777",
-            "relation": "isSupplementedBy",
-            "resource_type": "publication-report",
-            "scheme": "sra"
-        },
-        {
-            "identifier": "Q9GYV0",
-            "relation": "isSupplementTo",
-            "resource_type": "publication-section",
-            "scheme": "uniprot"
         },
         {
             "identifier": "http://www.heatflow.und.edu/index2.html",
@@ -229,34 +161,46 @@ Below is an example JSON metadata file that demonstrates almost everything that 
             "scheme": "urn"
         },
         {
-            "identifier": "swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2",
-            "relation": "requires",
-            "resource_type": "publication-technicalnote",
-            "scheme": "swh"
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isAlternateIdentifier",
+            "resource_type": "dataset",
+            "scheme": "ads"
         },
         {
-            "identifier": "ascl:1908.011",
-            "relation": "reviews",
-            "resource_type": "publication-thesis",
-            "scheme": "ascl"
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "hasMetadata",
+            "resource_type": "dataset",
+            "scheme": "ads"
         },
         {
-            "identifier": "ascl:1908.011",
-            "relation": "reviews",
-            "resource_type": "publication-workingpaper",
-            "scheme": "ascl"
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "hasVersion",
+            "resource_type": "dataset",
+            "scheme": "ads"
         },
         {
-            "identifier": "ascl:1908.011",
-            "relation": "reviews",
-            "resource_type": "software",
-            "scheme": "ascl"
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isMetadataFor",
+            "resource_type": "dataset",
+            "scheme": "ads"
         },
         {
-            "identifier": "ascl:1908.011",
-            "relation": "reviews",
-            "resource_type": "video",
-            "scheme": "ascl"
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isOriginalFormOf",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isVariantFormOf",
+            "resource_type": "dataset",
+            "scheme": "ads"
+        },
+        {
+            "identifier": "ads:2011ApJS..192...18K",
+            "relation": "isVersionOf",
+            "resource_type": "dataset",
+            "scheme": "ads"
         }
     ],
     "subjects": [
